@@ -1,0 +1,13 @@
+---
+:concurrency: 20
+development:
+  :concurrency: 20
+production:
+  :concurrency: 40
+:verbose: true
+:pidfile: ./tmp/pids/sidekiq.pid
+:logfile: ./log/sidekiq.log
+:timeout: 60
+:daemon: true
+:queues:
+  - ["notification", 2]
